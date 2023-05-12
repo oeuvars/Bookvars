@@ -6,8 +6,8 @@ import Providers from '@/components/Providers'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Sinjari',
-  description: 'Your Mental Health Support',
+  title: 'BookStore',
+  description: 'Welcome to OeuvarsBooks',
 }
 
 export default function RootLayout({
@@ -16,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className='bg-slate-950'>
       <Providers>
         <body className={inter.className}>
           <Chat />

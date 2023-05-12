@@ -6,17 +6,17 @@ import { FC, HTMLAttributes, useContext } from 'react'
 import MarkdownLite from './MarkdownLite'
 
 interface ChatMessagesProps extends HTMLAttributes<HTMLDivElement> {
-  
+
 }
 
 const ChatMessages: FC<ChatMessagesProps> = ({className, ...props}) => {
   const {messages} = useContext(MessagesContext)
   const inverseMessages = [...messages].reverse()
-  
+
 
   return (
   <div {...props} className={cn(
-    'flex flex-col-reverse gap-3 overflow-y-auto scrollbar-thumb-blue scrollbar-thumb-rounded scrollbar-track-blue-lighter scrollbar-w-2 scrolling-touch', 
+    'flex flex-col-reverse gap-3 overflow-y-auto scrollbar-thumb-blue scrollbar-thumb-rounded scrollbar-track-blue-lighter scrollbar-w-2 scrolling-touch',
     className
   )}>
     <div className='flex-1 flex-grow' />
@@ -32,7 +32,7 @@ const ChatMessages: FC<ChatMessagesProps> = ({className, ...props}) => {
               'orders-2 items-start': !message.isUserMessage,
              }
             )}>
-              <p className={cn('px-4 py-2 rounded-lg', {
+              <p className={cn('px-4 py-2 rounded-lg font-outfit', {
                 'bg-blue-600 text-white': message.isUserMessage,
                 'bg-gray-200 text-gray-900': !message.isUserMessage,
               })}>

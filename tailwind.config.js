@@ -14,7 +14,7 @@ module.exports = {
       },
       fontFamily: {
         playfair: ['Playfair Display', "serif"],
-        didact: ['Didact Gothic', "sans-serif"]
+        outfit: ['Outfit', "sans-serif"]
       },
       keyframes: {
         "accordion-down": {
